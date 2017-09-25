@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="稀饭菌"/>
+    <meta name="Copyright" content="网站版权"/>
+    <meta name="keywords" content="网站关键字"/>
+    <meta name="description" content="网站描述"/>
+    <title>太阳系</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+
+        .bg{position: relative;width: 100%;height: 600px;margin:auto;perspective: 9999999px;background: url("img/bg.png")no-repeat center/contain;perspective-origin: 0 -500000%}
+
+        .solarSystem{position: absolute;left: 50%;width: 600px;height: 600px;}
+
+        .solarSystem div{position: absolute;top:calc(50% - 25px);width: 50px;line-height: 50px;text-align: center;transform-style: preserve-3d}
+
+        .solarSystem div:nth-child(2){left: 60px;transform-origin: -60px;animation: revolution 3s linear infinite}
+        .solarSystem div:nth-child(3){left: 120px;transform-origin: -120px;animation: revolution1 5s linear infinite}
+        .solarSystem div:nth-child(4){left: 180px;transform-origin: -180px;animation: revolution2 6s linear infinite}
+        .solarSystem div:nth-child(5){left: 240px;transform-origin: -240px;animation: revolution3 10s linear infinite}
+        .solarSystem div:nth-child(6){left: 300px;transform-origin: -300px;animation: revolution4 13s linear infinite}
+        .solarSystem div:nth-child(7){left: 360px;transform-origin: -360px;animation: revolution5 15s linear infinite}
+        .solarSystem div:nth-child(8){left: 420px;transform-origin: -420px;animation: revolution6 17s linear infinite}
+        .solarSystem div:nth-child(9){left: 480px;transform-origin: -480px;animation: revolution7 20s linear infinite}
+
+        .solarSystem div p{border-radius: 50%;transform-style: preserve-3d;color: white;background:no-repeat center/cover;}
+        .solarSystem div:nth-child(1) p{background-image: url("img/sun.png")}
+        .solarSystem div:nth-child(2) p{animation: rotation 3s linear infinite ;background-image: url("img/mercury.png")}
+        .solarSystem div:nth-child(3) p{animation: rotation 5s linear infinite ;background-image: url("img/venus.png")}
+        .solarSystem div:nth-child(4) p{animation: rotation 6s linear infinite ;background-image: url("img/earth.png")}
+        .solarSystem div:nth-child(5) p{animation: rotation 10s linear infinite ;background-image: url("img/mars.png")}
+        .solarSystem div:nth-child(6) p{animation: rotation 13s linear infinite ;background-image: url("img/jupiter.png")}
+        .solarSystem div:nth-child(7) p{animation: rotation 15s linear infinite ;background-image: url("img/saturn.png")}
+        .solarSystem div:nth-child(8) p{animation: rotation 17s linear infinite ;background-image: url("img/uranus.png")}
+        .solarSystem div:nth-child(9) p{animation: rotation 20s linear infinite ;background-image: url("img/neptune.png")}
+
+        @keyframes revolution {
+            0%{z-index: -2;}
+            50%{transform: rotateY(180deg) ;z-index: -2}
+            100%{transform: rotateY(360deg);z-index: 2}
+        }
+        @keyframes revolution1 {
+            0%{z-index: -3}
+            50%{transform: rotateY(180deg);z-index: -3}
+            100%{transform: rotateY(360deg);z-index: 3}
+        }
+        @keyframes revolution2 {
+            0%{z-index: -4}
+            50%{transform: rotateY(180deg);z-index: -4}
+            100%{transform: rotateY(360deg);z-index: 4}
+        }
+        @keyframes revolution3 {
+            0%{z-index: -5}
+            50%{transform: rotateY(180deg);z-index: -5}
+            100%{transform: rotateY(360deg);z-index: 5}
+        }
+        @keyframes revolution4 {
+            0%{z-index: -6}
+            50%{transform: rotateY(180deg);z-index: -6}
+            100%{transform: rotateY(360deg);z-index: 6}
+        }
+        @keyframes revolution5 {
+            0%{z-index: -7}
+            50%{transform: rotateY(180deg);z-index: -7}
+            100%{transform: rotateY(360deg);z-index: 7}
+        }
+        @keyframes revolution6 {
+            0%{z-index: -8}
+            50%{transform: rotateY(180deg);z-index: -8}
+            100%{transform: rotateY(360deg);z-index: 8}
+        }
+        @keyframes revolution7 {
+            0%{z-index: -9}
+            50%{transform: rotateY(180deg);z-index: -9}
+            100%{transform: rotateY(360deg);z-index: 9}
+        }
+        @keyframes rotation {
+            25%{transform: rotateY(-90deg)scale(0.5,0.5)}
+            50%{transform: rotateY(-180deg)scale(1,1)}
+            75%{transform: rotateY(-270deg)scale(1.5,1.5)}
+            100%{transform: rotateY(-360deg)scale(1,1)}
+        }
+
+        @keyframes revolution {
+            0%{z-index: -2;}
+            50%{transform: rotateY(180deg) ;z-index: -2}
+            100%{transform: rotateY(360deg);z-index: 2}
+        }
+
+        @-webkit-keyframes revolution1 {
+            0%{z-index: -3}
+            50%{transform: rotateY(180deg);z-index: -3}
+            100%{transform: rotateY(360deg);z-index: 3}
+        }
+        @-webkit-keyframes revolution2 {
+            0%{z-index: -4}
+            50%{transform: rotateY(180deg);z-index: -4}
+            100%{transform: rotateY(360deg);z-index: 4}
+        }
+        @-webkit-keyframes revolution3 {
+            0%{z-index: -5}
+            50%{transform: rotateY(180deg);z-index: -5}
+            100%{transform: rotateY(360deg);z-index: 5}
+        }
+        @-webkit-keyframes revolution4 {
+            0%{z-index: -6}
+            50%{transform: rotateY(180deg);z-index: -6}
+            100%{transform: rotateY(360deg);z-index: 6}
+        }
+        @-webkit-keyframes revolution5 {
+            0%{z-index: -7}
+            50%{transform: rotateY(180deg);z-index: -7}
+            100%{transform: rotateY(360deg);z-index: 7}
+        }
+        @-webkit-keyframes revolution6 {
+            0%{z-index: -8}
+            50%{transform: rotateY(180deg);z-index: -8}
+            100%{transform: rotateY(360deg);z-index: 8}
+        }
+        @-webkit-keyframes revolution7 {
+            0%{z-index: -9}
+            50%{transform: rotateY(180deg);z-index: -9}
+            100%{transform: rotateY(360deg);z-index: 9}
+        }
+        @-webkit-keyframes rotation {
+            25%{transform: rotateY(-90deg)scale(0.5,0.5)}
+            50%{transform: rotateY(-180deg)scale(1,1)}
+            75%{transform: rotateY(-270deg)scale(1.5,1.5)}
+            100%{transform: rotateY(-360deg)scale(1,1)}
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="solarSystem">
+            <div><p class="sun">太阳</p></div>
+            <div><p class="mercury">水星</p></div>
+            <div><p class="venus">金星</p></div>
+            <div><p class="earth">地球</p></div>
+            <div><p class="mars">火星</p></div>
+            <div><p class="jupiter">木星</p></div>
+            <div><p class="saturn">土星</p></div>
+            <div><p class="uranus">天王星</p></div>
+            <div><p class="neptune">海王星</p></div>
+        </div>
+    </div>
+</body>
+</html>
